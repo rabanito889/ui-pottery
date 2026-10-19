@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="esp">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
       <header>
         <h1>Taller de cerámica</h1>
         <p>Un espacio para crear piezas con tus propias manos.</p>
-        <img src="/src/interface/taller.svg" width="200" height="200" />
+        <img src="/src/interface/taller.svg" width="200" height="200" alt="imagen de ceramica" />
         <hr />
         <p>Abierto de lunes a viernes, de 10:00 a 19:00.</p>
       </header>
@@ -28,32 +28,35 @@
           <h6>Consultas e inscripciones</h6>
           <form id="contact-form">
             <div>
-              <input id="name" name="name" type="text" placeholder="Nombre" />
+              <label for="name" class="form-label">Nombre</label>
+              <input id="name" name="name" type="text" class="form-control" placeholder="Nombre" />
             </div>
             <div>
-              <input id="email" name="email" type="email" placeholder="Correo electrónico" />
+              <label for="email" class="form-label">email</label>
+              <input id="email" name="email" type="email" class="form-control" placeholder="Correo electrónico" />
             </div>
             <div>
-              <textarea id="message" name="message" rows="3" placeholder="Tu consulta"></textarea>
+              <label for="message" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tu consulta"></textarea>
             </div>
             <fieldset>
               <legend>¿Ya asististe a uno de nuestros cursos?</legend>
-              <div>
-                <input type="radio" id="attended-yes" name="attended" value="yes" required />
+              <div class="form-field">
+                <input type="radio" id="attended-yes" name="attended" value="yes" required class="radio" />
                 <label for="attended-yes">Sí</label>
               </div>
-              <div>
-                <input type="radio" id="attended-no" name="attended" value="no" />
+              <div class="form-field">
+                <input type="radio" id="attended-no" name="attended" value="no" class="radio" />
                 <label for="attended-no">No, sería mi primera vez</label>
               </div>
             </fieldset>
             <div>
               <label for="notifications">¿Te gustaría recibir notificaciones?</label>
-              <div>
+              <div class="switch">
                 <input type="checkbox" id="notifications" name="notifications" role="switch" switch />
               </div>
             </div>
-            <button type="submit">Enviar consulta</button>
+            <button type="submit" class="btn-solid" class="theme-primary" >Enviar consulta</button>
             <p id="status" role="status"></p>
           </form>
         </section>
